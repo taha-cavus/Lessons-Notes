@@ -1,0 +1,2 @@
+# REACT
+React, web sayfalarında her documenti değiştirmek istediğimiz zaman sayfayı yeniden yüklemek yerine o değişen kısmı sadece yeniden yükler ve değiştirir. Böylece daha yüksek verim sağlanır. Kısaca bu. Özellikle facebook, twitter gibi anın içinde sürekli verilerin gelip gitmesi gereken tarzda uygulamalarda çok güçlüdür.
