@@ -19,12 +19,12 @@ fetch("https://jsonplaceholder.typicode.com/users")
     .then((users) => {
         console.log(users)
         fetch("https://jsonplaceholder.typicode.com/users")
-            .then((data) => data.json())
-            .then((users) => console.log(users));
+            .then((data2) => data2.json())
+            .then((users2) => console.log(users2));
     });
 
 
-//BU YÜZDEN ASYN-AWAİT KULLANIRIZ: asyb fonksyon oluştururp await ile adımların sırasını set ederiz
+//BU YÜZDEN ASYN-AWAİT KULLANIRIZ: asyn fonksyon oluştururp await ile adımların sırasını set ederiz
 async function getData(){
     const data = await (
         await fetch("https://jsonplaceholder.typicode.com/users")
