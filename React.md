@@ -236,3 +236,44 @@ yine aynı şekilde çalışır. Yoksa diğer about ve users route'larına bakı
 <br/>
 <br/>
 <br/>
+
+# Memoization
+
+## React.memo
+Sayfada değişen stateler, proplar olduğunda return re-render yaptığı için içindeki başka componentlerde değişmediği halde re-render edilebiliyor. Performansı kötü etkiliyor. Bu durumu engellemek için o değişmeyen componentlerin exportunu şöyle yapmalıyız:
+
+```jsx
+export default React.memo(componentName);
+```
+
+## useMemo
+Referans tipleri ile primitiv tipleri olayı. Primitivler hep birbirine eşitti ama reference tipleri bellekte
+spesifik bir yeri tuttukları için eşit olmazlar. Bu yüzden bir component çalıştığında reference tip bir değişken aynı değeri alsada önceki değeriyle yani yeri aynı olmadığı için React.memo "===" false döndürür.
+Bunu engellemek için ya o değişkeni componentin dışında tanımlarız yada içeride ihtiyacımız varsa useMemo
+hook'unu kullanırız.
+
+```jsx
+import {useMemo} from "react";
+//const data ={name:"mehmet"};
+function App(){
+    const data = useMemo(() => {
+        return { name: "mehmet", number };
+    }, [number]); //bu diziye atanan değer veya değerler değiştiğinde re-render yapar sadece.
+}
+```
+
+## useCallback
+Bir fonksyonumuz varsa ve bu fonksyonu herhangi bir alt componente geçiriyorsak ve o alt componentinde tekrar
+tekrar render olmasını istemiyorsak useCallback hook'unu kullanabiliriz.
+
+<br/>
+<br/>
+<br/>
+
+# Context API
+State'leri kullanmak için component'den component'e aktarmak yerine react'de default olarak gelen
+context API'ı ile herhangi bir dataya herhangi bir component'de kullanabiliriz.
+State yönetiminde kullanılan birden fazla araç vardır. Bunların en eskisi redux'tır.
+Ama kullanımı ve öğrenimi en temizi context API'dır. Ama tabiki her işe göre kullanılan araç
+değişebilir iş ve ekibe göre.
+![a](./pic/context.PNG)
