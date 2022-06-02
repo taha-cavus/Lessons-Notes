@@ -160,7 +160,7 @@ Not: useEffect'in return değeri, componentin silindiğinde(unmount) yapılacağ
 
 # Routing
 React router bir web sayfasında belli kısımları değiştirmek istersek tüm sayfayı baştan render 
-etmek yerine sadece değişen kısmı render etmek için kullanırız.
+etmek yerine sadece değişen kısmı render etmek için kullandığımız bir kütüphane.
 [Bu linkten projeye eklenebilir](https://v5.reactrouter.com/web/guides/quick-start)
 
 ### Basic Routing Example
