@@ -1,1 +1,3 @@
-ctrl + x == pointerın olduğu line'ı siler ve copyler
+# VS CODE 
+
+- ctrl + x == deletes the line of pointer without selecting
