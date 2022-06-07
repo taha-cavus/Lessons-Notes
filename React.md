@@ -277,3 +277,13 @@ State yönetiminde kullanılan birden fazla araç vardır. Bunların en eskisi r
 Ama kullanımı ve öğrenimi en temizi context API'dır. Ama tabiki her işe göre kullanılan araç
 değişebilir iş ve ekibe göre.
 ![a](./pic/context.PNG)
+
+## Context
+Context, prop’ları her seviyede manuel olarak geçmek zorunda kalmadan bileşen ağacı üzerinden veri iletmenin bir yolunu sağlar.  
+<br/>
+Tipik bir React uygulamasında veri prop’lar aracılığıyla yukarıdan aşağıya aktarılır (üst bileşenlerden alt bileşenlere). Fakat bu tür bir kullanım, uygulamadaki birçok bileşen tarafından ihtiyaç duyulan belirli tipteki prop’lar (örneğin; lokalizasyon, arayüz teması) için kullanışsız olabilir. Context, bileşen ağacın her bir seviyesi üzerinden açıkça bir prop geçirmeden, bileşenler arasında bu gibi değerleri paylaşmanın bir yolunu sağlar.  
+<br/>  
+
+## Context Ne Zaman Kullanılır
+Context; mevcut kullanıcıyı doğrulama, tema veya dil seçimi gibi React bileşen ağacında global olarak düşünülebilecek verileri paylaşmak için tasarlanmıştır. Örneğin aşağıdaki kodda Button bileşenine stil vermek için manuel olarak bir “theme” prop’unu geçiyoruz.
+

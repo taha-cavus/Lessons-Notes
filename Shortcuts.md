@@ -1,0 +1,1 @@
+ctrl + x == pointerın olduğu line'ı siler ve copyler
